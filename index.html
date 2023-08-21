@@ -15,14 +15,14 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- open graph meta data -->
-    <meta property="og:title" content="Dedi Indrawan Personal Portfolio">
+    <meta property="og:title" content="Aplikasi Jadwal Mata Pelajaran">
     <meta property="og:description"
         content="Selamat datang di aplikasi Jadwal Mata Pelajaran. Ini adalah aplikasi berbasis website yang dapat membantu para siswa dalam mencatat apa saja mata pelajaran yang akan dipelajari di setiap harinya.">
     <meta property="og:image" content="https://i.postimg.cc/VLcbBcnv/dedi-indrawan.png">
     <meta property="og:url" content="https://dediindrawan.github.io/jadwal-mata-pelajaran">
     <!-- favicon -->
-    <link rel="icon" href="./public/assets/dedi-indrawan-icon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="./public/assets/dedi-indrawan-icon.ico" type="image/x-icon">
+    <link rel="icon" href="dedi-indrawan-icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="dedi-indrawan-icon.ico" type="image/x-icon">
     <!-- connecting to cdn fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
@@ -31,12 +31,14 @@
     <!-- container start -->
     <div class="container-auto w-full mx-auto p-6 text-slate-200 bg-slate-800 flex flex-col gap-4">
         <h1 class="text-center text-xl uppercase font-bold tracking-widest">jadwal mata pelajaran</h1>
+        <!-- timer -->
         <div class="mt-6">
             <div class="day"></div>
             <div class="date"></div>
             <div class="clock"></div>
         </div>
 
+        <!-- popup alert -->
         <div class="alert py-6 text-center fixed top-0 right-0 left-0 hidden rounded-md bg-orange-500">Sebelum klik
             "Simpan", buat jadwal dulu!</div>
 
