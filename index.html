@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Jadwal Pelajaran</title>
+    <!-- information handling referer on http request -->
+    <meta name="referrer" content="no-referrer">
+    <!-- SEO meta tag -->
+    <meta name="description"
+        content="Selamat datang di aplikasi Jadwal Mata Pelajaran. Ini adalah aplikasi berbasis website yang dapat membantu para siswa dalam mencatat apa saja mata pelajaran yang akan dipelajari di setiap harinya.">
+    <meta name="keywords" content="dedi indrawan, web developer, web programmer, content creator, aplikasi jadwal mata pelajaran">
+    <meta name="author" content="Dedi Indrawan">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- open graph meta data -->
+    <meta property="og:title" content="Dedi Indrawan Personal Portfolio">
+    <meta property="og:description"
+        content="Selamat datang di aplikasi Jadwal Mata Pelajaran. Ini adalah aplikasi berbasis website yang dapat membantu para siswa dalam mencatat apa saja mata pelajaran yang akan dipelajari di setiap harinya.">
+    <meta property="og:image" content="https://i.postimg.cc/VLcbBcnv/dedi-indrawan.png">
+    <meta property="og:url" content="https://dediindrawan.github.io/jadwal-mata-pelajaran">
+    <!-- favicon -->
+    <link rel="icon" href="./public/assets/dedi-indrawan-icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/assets/dedi-indrawan-icon.ico" type="image/x-icon">
+    <!-- connecting to cdn fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+    <!-- container start -->
+    <div class="container-auto w-full mx-auto p-6 text-slate-200 bg-slate-800 flex flex-col gap-4">
+        <h1 class="text-center text-xl uppercase font-bold tracking-widest">jadwal mata pelajaran</h1>
+        <div class="mt-6">
+            <div class="day"></div>
+            <div class="date"></div>
+            <div class="clock"></div>
+        </div>
+
+        <div class="alert py-6 text-center fixed top-0 right-0 left-0 hidden rounded-md bg-orange-500">Sebelum klik
+            "Simpan", buat jadwal dulu!</div>
+
+        <!-- monday -->
+        <div class="p-6 border border-slate-500 rounded-md">
+            <h1 class="p-2 text-center text-lg uppercase font-semibold tracking-widest bg-teal-600 rounded-md">senin
+            </h1>
+
+            <div class="mt-6 p-2 flex justify-between items-center border border-slate-500 rounded-md">
+                <p><i class="fa-solid fa-bell mr-1.5 text-amber-500"></i>Total: <span
+                        class="monday-total-schedule">0</span></p>
+                <button class="monday-btn-clear-all max-w-max p-2 rounded-md bg-rose-500 hover:bg-rose-600">Hapus
+                    Semua</button>
+            </div>
+
+            <form class="my-8 flex justify-between items-center gap-4">
+                <input
+                    class="monday-form-input w-full p-2 border border-slate-500 rounded-md bg-transparent outline-none"
+                    type="text" placeholder="Buat jadwal..." autocomplete="off">
+                <button class="monday-btn-create w-24 p-2 rounded-md bg-violet-500 hover:bg-violet-600">Simpan</button>
+            </form>
+
+            <ol class="monday-schedule-content flex flex-col gap-4"></ol>
+        </div>
+
+        <!-- tuesday -->
+        <div class="p-6 border border-slate-500 rounded-md">
+            <h1 class="p-2 text-center text-lg uppercase font-semibold tracking-widest bg-teal-600 rounded-md">selasa
+            </h1>
+
+            <div class="mt-6 p-2 flex justify-between items-center border border-slate-500 rounded-md">
+                <p><i class="fa-solid fa-bell mr-1.5 text-amber-500"></i>Total: <span
+                        class="tuesday-total-schedule">0</span></p>
+                <button class="tuesday-btn-clear-all max-w-max p-2 rounded-md bg-rose-500 hover:bg-rose-600">Hapus
+                    Semua</button>
+            </div>
+
+            <form class="my-8 flex justify-between items-center gap-4">
+                <input
+                    class="tuesday-form-input w-full p-2 border border-slate-500 rounded-md bg-transparent outline-none"
+                    type="text" placeholder="Buat jadwal..." autocomplete="off">
+                <button class="tuesday-btn-create w-24 p-2 rounded-md bg-violet-500 hover:bg-violet-600">Simpan</button>
+            </form>
+
+            <ol class="tuesday-schedule-content flex flex-col gap-4"></ol>
+        </div>
+
+        <!-- wednesday -->
+        <div class="p-6 border border-slate-500 rounded-md">
+            <h1 class="p-2 text-center text-lg uppercase font-semibold tracking-widest bg-teal-600 rounded-md">rabu
+            </h1>
+
+            <div class="mt-6 p-2 flex justify-between items-center border border-slate-500 rounded-md">
+                <p><i class="fa-solid fa-bell mr-1.5 text-amber-500"></i>Total: <span
+                        class="wednesday-total-schedule">0</span></p>
+                <button class="wednesday-btn-clear-all max-w-max p-2 rounded-md bg-rose-500 hover:bg-rose-600">Hapus
+                    Semua</button>
+            </div>
+
+            <form class="my-8 flex justify-between items-center gap-4">
+                <input
+                    class="wednesday-form-input w-full p-2 border border-slate-500 rounded-md bg-transparent outline-none"
+                    type="text" placeholder="Buat jadwal..." autocomplete="off">
+                <button
+                    class="wednesday-btn-create w-24 p-2 rounded-md bg-violet-500 hover:bg-violet-600">Simpan</button>
+            </form>
+
+            <ol class="wednesday-schedule-content flex flex-col gap-4"></ol>
+        </div>
+
+        <!-- thursday -->
+        <div class="p-6 border border-slate-500 rounded-md">
+            <h1 class="p-2 text-center text-lg uppercase font-semibold tracking-widest bg-teal-600 rounded-md">kamis
+            </h1>
+
+            <div class="mt-6 p-2 flex justify-between items-center border border-slate-500 rounded-md">
+                <p><i class="fa-solid fa-bell mr-1.5 text-amber-500"></i>Total: <span
+                        class="thursday-total-schedule">0</span></p>
+                <button class="thursday-btn-clear-all max-w-max p-2 rounded-md bg-rose-500 hover:bg-rose-600">Hapus
+                    Semua</button>
+            </div>
+
+            <form class="my-8 flex justify-between items-center gap-4">
+                <input
+                    class="thursday-form-input w-full p-2 border border-slate-500 rounded-md bg-transparent outline-none"
+                    type="text" placeholder="Buat jadwal..." autocomplete="off">
+                <button
+                    class="thursday-btn-create w-24 p-2 rounded-md bg-violet-500 hover:bg-violet-600">Simpan</button>
+            </form>
+
+            <ol class="thursday-schedule-content flex flex-col gap-4"></ol>
+        </div>
+
+        <!-- friday -->
+        <div class="p-6 border border-slate-500 rounded-md">
+            <h1 class="p-2 text-center text-lg uppercase font-semibold tracking-widest bg-teal-600 rounded-md">jumat
+            </h1>
+
+            <div class="mt-6 p-2 flex justify-between items-center border border-slate-500 rounded-md">
+                <p><i class="fa-solid fa-bell mr-1.5 text-amber-500"></i>Total: <span
+                        class="friday-total-schedule">0</span></p>
+                <button class="friday-btn-clear-all max-w-max p-2 rounded-md bg-rose-500 hover:bg-rose-600">Hapus
+                    Semua</button>
+            </div>
+
+            <form class="my-8 flex justify-between items-center gap-4">
+                <input
+                    class="friday-form-input w-full p-2 border border-slate-500 rounded-md bg-transparent outline-none"
+                    type="text" placeholder="Buat jadwal..." autocomplete="off">
+                <button class="friday-btn-create w-24 p-2 rounded-md bg-violet-500 hover:bg-violet-600">Simpan</button>
+            </form>
+
+            <ol class="friday-schedule-content flex flex-col gap-4"></ol>
+        </div>
+
+        <!-- saturday -->
+        <div class="p-6 border border-slate-500 rounded-md">
+            <h1 class="p-2 text-center text-lg uppercase font-semibold tracking-widest bg-teal-600 rounded-md">sabtu
+            </h1>
+
+            <div class="mt-6 p-2 flex justify-between items-center border border-slate-500 rounded-md">
+                <p><i class="fa-solid fa-bell mr-1.5 text-amber-500"></i>Total: <span
+                        class="saturday-total-schedule">0</span></p>
+                <button class="saturday-btn-clear-all max-w-max p-2 rounded-md bg-rose-500 hover:bg-rose-600">Hapus
+                    Semua</button>
+            </div>
+
+            <form class="my-8 flex justify-between items-center gap-4">
+                <input
+                    class="saturday-form-input w-full p-2 border border-slate-500 rounded-md bg-transparent outline-none"
+                    type="text" placeholder="Buat jadwal..." autocomplete="off">
+                <button
+                    class="saturday-btn-create w-24 p-2 rounded-md bg-violet-500 hover:bg-violet-600">Simpan</button>
+            </form>
+
+            <ol class="saturday-schedule-content flex flex-col gap-4"></ol>
+        </div>
+
+    </div>
+    <!-- container end -->
+
+    <!-- footer start -->
+    <footer class="w-full mx-auto pt-10 p-2 text-center text-slate-200 bg-slate-800">
+        <span>Aplikasi Jadwal Mata Pelajaran</span>
+        <div class="copyright">Made With Coffee &copy; <span class="copy"></span> | <a
+                href="https://dediindrawan.github.io/personal-portfolio" target="_blank">Dedi Indrawan</a></div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- connecting to cdn tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- connecting to javascript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
